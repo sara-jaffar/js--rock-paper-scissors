@@ -10,7 +10,7 @@ let computerChoice;
 
 /*------------------------ Cached Element References ------------------------*/
 const rockBtnEl = document.querySelector("#rock");
-const paperBtnEl = document.querySelector("paper");
+const paperBtnEl = document.querySelector("#paper");
 const scissorsBtnEl = document.querySelector("#scissors");
 const resultDisplayEl = document.querySelector("#result-display");
 
@@ -27,21 +27,42 @@ function getcomputerChoice() {
 
 
 // initialize game state
-function play() {
+function play(event) {
     computerChoice = getcomputerChoice();
-    console.log(computerChoice);
+    playerChoice = event.target.id;
+    compare();
     // after updating state, render to html
     render()
 }
 // update the html
 function render() {
-    resultDisplayEl.textContent =`Computer Chose ${computerChoice}`;
+    resultDisplayEl.textContent =`Computer Chose ${computerChoice} and you chose ${playerChoice}. ${msg}`;
 }
+
+function compare() {
+    // Compare player choice and computer choice
+    if (playerChoice === computerChoice) {
+        msg = 'It\'s a tie!';
+    } else if (
+        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+        (playerChoice === 'paper' && computerChoice === 'rock') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper')
+    ) {
+        msg = 'You win!';
+    } else {
+        msg = 'You lose!';
+    }
+}
+
+
+
+
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-rockBtnEl.addEventListener('click', play); 
+
 // test() because if i added them it will run right away
+rockBtnEl.addEventListener('click', play); 
 paperBtnEl.addEventListener('click', play);
 scissorsBtnEl.addEventListener('click', play);
