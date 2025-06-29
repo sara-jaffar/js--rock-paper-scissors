@@ -13,6 +13,7 @@ const rockBtnEl = document.querySelector("#rock");
 const paperBtnEl = document.querySelector("#paper");
 const scissorsBtnEl = document.querySelector("#scissors");
 const resultDisplayEl = document.querySelector("#result-display");
+const resetBtnEl = document.querySelector("#resetButton");
 
 
 
@@ -54,8 +55,11 @@ function compare() {
     }
 }
 
-
-
+function resetGame() {
+    resultDisplayEl.textContent = ' ';
+    playerChoice = null;
+    computerChoice = null;
+}
 
 
 
@@ -66,3 +70,4 @@ function compare() {
 rockBtnEl.addEventListener('click', play); 
 paperBtnEl.addEventListener('click', play);
 scissorsBtnEl.addEventListener('click', play);
+resetBtnEl.addEventListener('click', resetGame)

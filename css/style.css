@@ -18,7 +18,7 @@ header {
 }
 
 
-button {
+.game-button {
   margin: 10px;
   font-size: 40px;
   background-color: transparent;
@@ -28,7 +28,11 @@ button {
   border-radius: 50%; 
 }
 
-button:hover {
+.game-button:hover {
   border: 1px solid rgba(0,0,0,0.5);
   cursor: pointer;
+}
+
+#resetButton {
+    margin: 15px;
 }
