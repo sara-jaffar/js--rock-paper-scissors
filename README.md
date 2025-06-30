@@ -1,4 +1,4 @@
-# 🎮 Rock, Paper, Scissors
+# ✊🖐️✌️ Rock, Paper, Scissors
 
 ![Screenshot or Logo](./path-to-your-screenshot-or-logo.png)
 
@@ -11,7 +11,7 @@ For example:
 
 ## 🚀 Getting Started
 
-**Play the game here:** [Deployed Game Link](https://your-deployment-link.com)
+**Play the game here:** [Deployed Game Link](https://sara-jaffar.github.io/js--rock-paper-scissors/)
 
 **Project Planning Materials:**  
 - [Wireframes](./planning/wireframes.png)  
